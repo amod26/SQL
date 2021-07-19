@@ -1,0 +1,28 @@
+ -- # #1 ##############################
+# -- # #How many employees in each department have a salary greater than $10,000?
+# -- # 
+# -- # # Tables of interest:
+# -- # #    employees
+# -- # #    departments
+# 
+# 
+# -- Select * from employees limit 1
+# --  id | first_name | last_name | salary | department_id 
+# -- ----+------------+-----------+--------+---------------
+# --   1 | John       | Smith     |  20000 |             1
+# 
+# -- Select * from departments limit 1
+# --  id |   name    
+# -- ----+-----------
+# --   1 | Reporting
+# 
+# -- SELECT 
+# --   COUNT(emp.id)   AS emp_count
+# --   , dept.name     AS dept_id
+# --   FROM employees emp 
+# --   JOIN departments dept
+# --     on emp.department_id = dept.id
+# --   WHERE emp.salary > 10000
+# --   GROUP BY 2
+# 
+# 
